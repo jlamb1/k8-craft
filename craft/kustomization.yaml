@@ -1,0 +1,13 @@
+secretGenerator:
+  - name: mysql-pass
+    literals:
+      - password=password
+resources:
+  - craft.yaml
+  - craft-volumeclaim.yaml
+  - craft-service.yaml
+  - postgres.yaml
+  - postgres-volumeclaim.yaml
+  - postgres-service.yaml
+  - redis.yaml
+  - redis-service.yaml

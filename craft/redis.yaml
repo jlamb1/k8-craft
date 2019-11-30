@@ -1,0 +1,62 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    name: redis
+    role: master
+  name: redis-master
+spec:
+  containers:
+    - name: master
+      image: redis:5.0.6-alpine
+      env:
+        - name: MASTER
+          value: "true"
+      ports:
+        - containerPort: 6379
+      resources:
+        limits:
+          cpu: "0.1"
+      volumeMounts:
+        - mountPath: /redis-master-data
+          name: data
+  volumes:
+    - name: data
+      emptyDir: {}
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: redis
+#   labels:
+#     app: redis
+# spec:
+#   containers:
+#     - name: redis
+#       image: redis:5.0.6-alpine
+#       env:
+#         - name: MASTER
+#           value: "true"
+#       command:
+#         - redis-server
+#         - "/redis-master/redis.conf"
+#       resources:
+#         limits:
+#           memory: "128Mi"
+#           cpu: "0.1"
+#       ports:
+#         - containerPort: 6379
+#           name: redis
+#       volumeMounts:
+#         - mountPath: /redis-master-data
+#           name: data
+#         # - mountPath: /redis-master
+#         #   name: config
+#   volumes:
+#     - name: data
+#       emptyDir: {}
+#     # - name: config
+#     #   configMap:
+#     #     name: example-redis-config
+#     #     items:
+#     #       - key: redis-config
+#     #         path: redis.conf
