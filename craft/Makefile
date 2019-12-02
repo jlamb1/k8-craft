@@ -8,3 +8,9 @@ k8-apply:
 
 set-env:
 	eval $(minikube docker-env)
+
+nginx:
+	docker build -f nginx/Dockerfile -t jlamb-nginx .
+
+php:
+	docker build -f php/Dockerfile -t jlamb-php .

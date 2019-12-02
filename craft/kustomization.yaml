@@ -11,3 +11,5 @@ resources:
   - postgres-service.yaml
   - redis.yaml
   - redis-service.yaml
+  - php.yaml
+  - php-service.yaml
