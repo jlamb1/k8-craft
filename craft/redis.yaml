@@ -4,6 +4,7 @@ metadata:
   labels:
     name: redis
     role: master
+    app: redis
   name: redis-master
 spec:
   containers:

@@ -21,15 +21,17 @@ return [
     'components' => [
         'redis' => [
             'class' => yii\redis\Connection::class,
-            'hostname' => getenv('REDIS_HOST'),
-            'port' => getenv('REDIS_PORT'),
-            'database' => getenv('REDIS_DEFAULT_DB'),
+            'hostname' => getenv('REDIS_SERVICE_HOST'),
+            'port' => getenv('REDIS_PORT_6379_TCP_PORT'),
+            'database' => '0',
         ],
         'cache' => [
             'class' => yii\redis\Cache::class,
             'defaultDuration' => 86400,
             'redis' => [
-                'database' => getenv('REDIS_CRAFT_DB')
+                'hostname' => getenv('REDIS_SERVICE_HOST'),
+                'database' => '1',
+                'port' => '6379',
             ]
         ],
         'session' => [

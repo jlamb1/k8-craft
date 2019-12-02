@@ -22,6 +22,9 @@ COPY app /usr/share/nginx/
 # Add default craft cms nginx config
 ADD ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
+RUN sed -ie "/user .* nginx;/d" /etc/nginx/nginx.conf \
+    && echo "user root;" >> /etc/nginx/nginx.conf
+
 RUN chown -Rf nginx:nginx /usr/share/nginx/
 
 EXPOSE 80
