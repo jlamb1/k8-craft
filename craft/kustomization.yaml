@@ -4,7 +4,7 @@ secretGenerator:
       - password=password
 resources:
   - craft.yaml
-  - craft-volumeclaim.yaml
+  # - craft-volumeclaim.yaml
   - craft-service.yaml
   - postgres.yaml
   - postgres-volumeclaim.yaml

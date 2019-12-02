@@ -15,8 +15,9 @@ spec:
         app: craft
     spec:
       containers:
-        - image: wyveo/craftcms-docker:latest
+        - image: jlamb-nginx-php-fpm:latest
           name: craft
+          imagePullPolicy: Never
           env:
             - name: LANG
               value: C.UTF-8
@@ -56,10 +57,10 @@ spec:
           ports:
             - containerPort: 80
               name: craft
-          volumeMounts:
-            - name: craft-persistent-storage
-              mountPath: /usr/share/nginx
-      volumes:
-        - name: craft-persistent-storage
-          persistentVolumeClaim:
-            claimName: craft-volumeclaim
+      #     volumeMounts:
+      #       - name: craft-persistent-storage
+      #         mountPath: /usr/share/nginx
+      # volumes:
+      #   - name: craft-persistent-storage
+      #     persistentVolumeClaim:
+      #       claimName: craft-volumeclaim
