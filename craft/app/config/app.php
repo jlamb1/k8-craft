@@ -22,16 +22,21 @@ return [
         'redis' => [
             'class' => yii\redis\Connection::class,
             'hostname' => getenv('REDIS_HOST'),
-            'port' => 6379,
+            'port' => getenv('REDIS_PORT'),
+            'database' => getenv('REDIS_DEFAULT_DB'),
         ],
         'cache' => [
             'class' => yii\redis\Cache::class,
             'defaultDuration' => 86400,
-            'keyprefix' => 'craft_cache'
+            'redis' => [
+                'database' => getenv('REDIS_CRAFT_DB')
+            ]
         ],
         'session' => [
             'class' => yii\redis\Session::class,
-            'as session' => craft\behaviors\SessionBehavior::class,
+            'as session' => [
+                'class' => craft\behaviors\SessionBehavior::class,
+            ],
         ],
     ],
 ];

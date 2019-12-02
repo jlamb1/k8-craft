@@ -17,7 +17,7 @@ RUN rm -rf /usr/share/nginx/* && \
 COPY app /usr/share/nginx/
 
 # Install the yii2-redis library
-RUN composer require --prefer-dist yiisoft/yii2-redis -d /usr/share/nginx/
+# RUN composer require --prefer-dist yiisoft/yii2-redis -d /usr/share/nginx/
 
 # Add default craft cms nginx config
 ADD ./nginx/default.conf /etc/nginx/conf.d/default.conf
