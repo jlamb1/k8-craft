@@ -61,10 +61,10 @@ spec:
               name: craft
           # volumeMounts:
           #   - name: shared-files
-          #     mountPath: /usr/share/nginx
+          #     mountPath: /var/www/html
       #     volumeMounts:
       #       - name: craft-persistent-storage
-      #         mountPath: /usr/share/nginx
+      #         mountPath: /var/www/html
       # volumes:
       #   - name: craft-persistent-storage
       #     persistentVolumeClaim:
