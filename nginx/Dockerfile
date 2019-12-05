@@ -5,7 +5,11 @@ FROM nginx:latest
 RUN apt-get update && \
     apt-get install -y postgresql-client-11
 
-COPY index.php web.config /var/www/html/
+# COPY web/ /var/www/html/web/
+
+# COPY vendor/ /var/www/html/vendor/
+
+COPY app/ /var/www/html/
 
 ADD default.conf /etc/nginx/conf.d/default.conf
 
@@ -16,5 +20,8 @@ RUN chown -Rf nginx:nginx /var/www/html/
 
 # RUN mkdir -p /var/www/html/web/cpresources && \
 #     chmod -R 777 /var/www/html/config/ /var/www/html/storage/ /var/www/html/web/cpresources
+
+RUN mkdir -p /var/www/html/web/cpresources && \
+    chmod -R 777 /var/www/html/config/ /var/www/html/storage/ /var/www/html/web/cpresources
 
 EXPOSE 80

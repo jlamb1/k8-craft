@@ -57,7 +57,9 @@ COPY php.ini /usr/local/etc/php/
 
 RUN mkdir -p /app
 
-COPY app /app
+# COPY app/ /app
 
-RUN mkdir -p /app/web/cpresources && \
-    chmod -R 777 /app/config/ /app/storage/ /app/web/cpresources
+COPY app /var/www/html/
+
+RUN mkdir -p /var/www/html/web/cpresources && \
+    chmod -R 777 /var/www/html/config/ /var/www/html/storage/ /var/www/html/web/cpresources
