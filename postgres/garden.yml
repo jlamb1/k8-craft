@@ -1,0 +1,15 @@
+kind: Module
+description: Postgres container
+name: postgres
+type: container
+image: postgres:11.5
+services:
+  - name: postgres
+    env:
+      POSTGRES_USER: craft3
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: craft3
+      POSTGRES_INITDB_ARGS: "-E UTF8"
+    ports:
+      - name: http
+        containerPort: 5432

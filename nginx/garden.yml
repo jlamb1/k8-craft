@@ -1,0 +1,13 @@
+kind: Module
+description: Nginx container
+name: craft
+type: container
+services:
+  - name: craft
+    ports:
+      - name: http
+        containerPort: 80
+    dependencies:
+      - php
+      - redis
+      - postgres

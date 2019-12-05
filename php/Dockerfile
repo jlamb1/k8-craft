@@ -53,7 +53,7 @@ RUN pecl install redis-5.1.1 && \
 # ENV LC_ALL en_US.UTF-8
 
 
-COPY ./php/php.ini /usr/local/etc/php/
+COPY php.ini /usr/local/etc/php/
 
 RUN mkdir -p /app
 

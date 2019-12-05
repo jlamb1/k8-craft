@@ -1,0 +1,12 @@
+kind: Module
+description: Redis container
+name: redis
+type: container
+image: redis:5.0.6-alpine
+services:
+  - name: redis
+    env:
+      MASTER: "true"
+    ports:
+      - name: tcp
+        containerPort: 6379

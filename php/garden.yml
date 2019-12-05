@@ -1,0 +1,20 @@
+kind: Module
+description: PHP container
+name: php
+type: container
+services:
+  - name: php
+    # command:
+    #   - "/bin/bash"
+    #   - "-c"
+    #   - >
+    #     cp -r /app/. /var/www/html;
+    #     mkdir -p -m777 /var/www/html/web/cpresources /var/www/html/storage/runtime;
+    #     chmod -R 777 /var/www/html/config/ /var/www/html/storage/;
+    #     chmod -R 777 /var/www/html/web/cpresources/ /var/www/html/storage/runtime;
+    ports:
+      - name: http
+        containerPort: 9000
+    dependencies:
+      - redis
+      - postgres

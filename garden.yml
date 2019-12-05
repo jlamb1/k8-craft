@@ -1,0 +1,6 @@
+kind: Project
+name: craftcms
+environments:
+  - name: local
+    providers:
+      - name: local-kubernetes
