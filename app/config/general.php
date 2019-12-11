@@ -26,6 +26,10 @@ return [
         // Whether to save the project config out to config/project.yaml
         // (see https://docs.craftcms.com/v3/project-config.html)
         'useProjectConfigFile' => false,
+
+        'siteUrl' => 'http://test.com',
+        'siteName' => 'test',
+        'defaultCpLanguage' => 'en-US',
     ],
 
     // Dev environment settings
