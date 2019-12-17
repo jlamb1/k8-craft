@@ -62,6 +62,10 @@ RUN mkdir -p /app
 
 COPY app/ /app
 
+# Install composer dependencies
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
+RUN composer install -d /app/
+
 # COPY app/ /var/www/html
 
 RUN mkdir -p /var/www/html/web/cpresources /var/www/html/config/ /var/www/html/storage/ && \
