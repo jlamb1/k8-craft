@@ -1,0 +1,522 @@
+
+[2019-12-11T20:13:40.667Z] Getting status...
+
+[2019-12-11T20:13:41.346Z] Getting status... → Done
+
+[2019-12-11T20:13:41.702Z] modules:
+  - allowPublish: true
+    apiVersion: garden.io/v0
+    build:
+      dependencies: []
+    configPath: /Users/jlamb/whocares/nginx/garden.yml
+    description: Nginx container
+    kind: Module
+    name: craft
+    outputs: {}
+    path: /Users/jlamb/whocares/nginx
+    serviceConfigs:
+      - dependencies: []
+        hotReloadable: false
+        name: craft
+    taskConfigs: []
+    testConfigs: []
+    type: kubernetes
+  - allowPublish: true
+    apiVersion: garden.io/v0
+    build:
+      dependencies: []
+    configPath: /Users/jlamb/whocares/php/garden.yml
+    description: PHP container
+    kind: Module
+    name: php
+    outputs: {}
+    path: /Users/jlamb/whocares/php
+    serviceConfigs:
+      - dependencies: []
+        hotReloadable: false
+        name: php
+    taskConfigs: []
+    testConfigs: []
+    type: kubernetes
+  - allowPublish: true
+    apiVersion: garden.io/v0
+    build:
+      dependencies: []
+    configPath: /Users/jlamb/whocares/postgres/garden.yml
+    description: Postgres container
+    kind: Module
+    name: postgres
+    outputs: {}
+    path: /Users/jlamb/whocares/postgres
+    serviceConfigs:
+      - dependencies: []
+        hotReloadable: false
+        name: postgres
+    taskConfigs: []
+    testConfigs: []
+    type: kubernetes
+  - allowPublish: true
+    apiVersion: garden.io/v0
+    build:
+      dependencies: []
+    configPath: /Users/jlamb/whocares/redis/garden.yml
+    description: Redis container
+    kind: Module
+    name: redis
+    outputs: {}
+    path: /Users/jlamb/whocares/redis
+    serviceConfigs:
+      - dependencies: []
+        hotReloadable: false
+        name: redis
+    taskConfigs: []
+    testConfigs: []
+    type: kubernetes
+
+
+[2019-12-11T20:13:50.055Z] Getting status...
+
+[2019-12-11T20:13:50.688Z] Getting status... → Done
+
+[2019-12-11T20:13:51.209Z] Syncing module sources (4 files)...
+
+[2019-12-11T20:13:51.210Z] Syncing module sources (4 files)...
+
+[2019-12-11T20:13:51.215Z] Syncing module sources (2 files)...
+
+[2019-12-11T20:13:51.218Z] Syncing module sources (3 files)...
+
+[2019-12-11T20:13:51.265Z] Syncing module sources (4 files)... → Done (took 0.1 sec)
+
+[2019-12-11T20:13:51.277Z] Syncing module sources (4 files)... → Done (took 0.1 sec)
+
+[2019-12-11T20:13:51.279Z] Syncing module sources (2 files)... → Done (took 0.1 sec)
+
+[2019-12-11T20:13:51.280Z] Syncing module sources (3 files)... → Done (took 0.1 sec)
+
+[2019-12-11T20:13:51.306Z] Getting build status for v-f6e1dd3260...
+
+[2019-12-11T20:13:51.308Z] Building version v-f6e1dd3260...
+
+[2019-12-11T20:13:51.312Z] Building version v-f6e1dd3260... → Done (took 0 sec)
+
+[2019-12-11T20:13:51.322Z] Getting build status for v-a37b8d216b...
+
+[2019-12-11T20:13:51.325Z] Getting build status for v-2a522e7ef7...
+
+[2019-12-11T20:13:51.327Z] Building version v-a37b8d216b...
+
+[2019-12-11T20:13:51.329Z] Building version v-2a522e7ef7...
+
+[2019-12-11T20:13:51.335Z] Building version v-2a522e7ef7... → Done (took 0 sec)
+
+[2019-12-11T20:13:51.337Z] Building version v-a37b8d216b... → Done (took 0 sec)
+
+[2019-12-11T20:13:51.352Z] Getting build status for v-24cd4a1988...
+
+[2019-12-11T20:13:51.354Z] Building version v-24cd4a1988...
+
+[2019-12-11T20:13:51.361Z] Building version v-24cd4a1988... → Done (took 0 sec)
+
+[2019-12-11T20:13:51.386Z] Deploying version v-f6e1dd3260...
+
+[2019-12-11T20:13:51.393Z] Deploying version v-2a522e7ef7...
+
+[2019-12-11T20:13:51.398Z] Deploying version v-a37b8d216b...
+
+[2019-12-11T20:13:51.445Z] Deploying version v-24cd4a1988...
+
+[2019-12-11T20:13:52.865Z] Waiting for resources to be ready...
+
+[2019-12-11T20:13:52.984Z] Waiting for resources to be ready...
+
+[2019-12-11T20:13:53.003Z] Waiting for resources to be ready...
+
+[2019-12-11T20:13:53.039Z] Waiting for resources to be ready...
+
+[2019-12-11T20:13:55.047Z] Deployment/craft: Error: ErrImageNeverPull
+
+[2019-12-11T20:13:55.076Z] Deployment/postgres: Pulling image "postgres:11.5"
+
+[2019-12-11T20:13:57.392Z] Resources ready
+
+[2019-12-11T20:13:57.411Z] Deploying version v-2a522e7ef7... → Done (took 6 sec)
+
+[2019-12-11T20:14:04.174Z] Deployment/postgres: Started container postgres
+
+[2019-12-11T20:14:08.191Z] Resources ready
+
+[2019-12-11T20:14:08.213Z] Deploying version v-24cd4a1988... → Done (took 16.8 sec)
+
+[2019-12-11T20:17:54.402Z] Getting status...
+
+[2019-12-11T20:17:55.505Z] Getting status... → Done
+
+[2019-12-11T20:17:55.856Z] modules:
+  - allowPublish: true
+    apiVersion: garden.io/v0
+    build:
+      dependencies: []
+    configPath: /Users/jlamb/whocares/nginx/garden.yml
+    description: Nginx container
+    kind: Module
+    name: craft
+    outputs: {}
+    path: /Users/jlamb/whocares/nginx
+    serviceConfigs:
+      - dependencies: []
+        hotReloadable: false
+        name: craft
+    taskConfigs: []
+    testConfigs: []
+    type: kubernetes
+  - allowPublish: true
+    apiVersion: garden.io/v0
+    build:
+      dependencies: []
+    configPath: /Users/jlamb/whocares/php/garden.yml
+    description: PHP container
+    kind: Module
+    name: php
+    outputs: {}
+    path: /Users/jlamb/whocares/php
+    serviceConfigs:
+      - dependencies: []
+        hotReloadable: false
+        name: php
+    taskConfigs: []
+    testConfigs: []
+    type: kubernetes
+  - allowPublish: true
+    apiVersion: garden.io/v0
+    build:
+      dependencies: []
+    configPath: /Users/jlamb/whocares/redis/garden.yml
+    description: Redis container
+    kind: Module
+    name: redis
+    outputs: {}
+    path: /Users/jlamb/whocares/redis
+    serviceConfigs:
+      - dependencies: []
+        hotReloadable: false
+        name: redis
+    taskConfigs: []
+    testConfigs: []
+    type: kubernetes
+  - allowPublish: true
+    apiVersion: garden.io/v0
+    build:
+      dependencies: []
+    configPath: /Users/jlamb/whocares/postgres/garden.yml
+    description: Postgres container
+    kind: Module
+    name: postgres
+    outputs: {}
+    path: /Users/jlamb/whocares/postgres
+    serviceConfigs:
+      - dependencies: []
+        hotReloadable: false
+        name: postgres
+    taskConfigs: []
+    testConfigs: []
+    type: kubernetes
+
+
+[2019-12-11T20:18:00.126Z] Getting status...
+
+[2019-12-11T20:18:00.784Z] Getting status... → Done
+
+[2019-12-11T20:18:01.294Z] Syncing module sources (4 files)...
+
+[2019-12-11T20:18:01.295Z] Syncing module sources (2 files)...
+
+[2019-12-11T20:18:01.300Z] Syncing module sources (4 files)...
+
+[2019-12-11T20:18:01.302Z] Syncing module sources (3 files)...
+
+[2019-12-11T20:18:01.345Z] Syncing module sources (4 files)... → Done (took 0.1 sec)
+
+[2019-12-11T20:18:01.354Z] Syncing module sources (2 files)... → Done (took 0.1 sec)
+
+[2019-12-11T20:18:01.356Z] Syncing module sources (4 files)... → Done (took 0.1 sec)
+
+[2019-12-11T20:18:01.360Z] Syncing module sources (3 files)... → Done (took 0.1 sec)
+
+[2019-12-11T20:18:01.378Z] Getting build status for v-a37b8d216b...
+
+[2019-12-11T20:18:01.379Z] Building version v-a37b8d216b...
+
+[2019-12-11T20:18:01.384Z] Building version v-a37b8d216b... → Done (took 0 sec)
+
+[2019-12-11T20:18:01.391Z] Getting build status for v-2a522e7ef7...
+
+[2019-12-11T20:18:01.393Z] Getting build status for v-f6e1dd3260...
+
+[2019-12-11T20:18:01.395Z] Building version v-2a522e7ef7...
+
+[2019-12-11T20:18:01.397Z] Building version v-f6e1dd3260...
+
+[2019-12-11T20:18:01.402Z] Building version v-2a522e7ef7... → Done (took 0 sec)
+
+[2019-12-11T20:18:01.405Z] Building version v-f6e1dd3260... → Done (took 0 sec)
+
+[2019-12-11T20:18:01.419Z] Getting build status for v-24cd4a1988...
+
+[2019-12-11T20:18:01.421Z] Building version v-24cd4a1988...
+
+[2019-12-11T20:18:01.426Z] Building version v-24cd4a1988... → Done (took 0 sec)
+
+[2019-12-11T20:18:01.464Z] Deploying version v-2a522e7ef7...
+
+[2019-12-11T20:18:01.466Z] Deploying version v-2a522e7ef7... → Version v-2a522e7ef7 already deployed
+
+[2019-12-11T20:18:01.469Z] Deploying version v-a37b8d216b...
+
+[2019-12-11T20:18:01.481Z] Deploying version v-f6e1dd3260...
+
+[2019-12-11T20:18:01.483Z] Deploying version v-f6e1dd3260... → Version v-f6e1dd3260 already deployed
+
+[2019-12-11T20:18:01.500Z] Deploying version v-24cd4a1988...
+
+[2019-12-11T20:18:01.503Z] Deploying version v-24cd4a1988... → Version v-24cd4a1988 already deployed
+
+[2019-12-11T20:18:02.895Z] Waiting for resources to be ready...
+
+[2019-12-11T20:19:57.599Z] Getting status...
+
+[2019-12-11T20:19:58.588Z] Getting status... → Done
+
+[2019-12-11T20:19:59.226Z] 
+⏳  Processing...
+
+[2019-12-11T20:19:59.252Z] Syncing module sources (4 files)...
+
+[2019-12-11T20:19:59.259Z] Syncing module sources (4 files)...
+
+[2019-12-11T20:19:59.265Z] Syncing module sources (3 files)...
+
+[2019-12-11T20:19:59.273Z] Syncing module sources (2 files)...
+
+[2019-12-11T20:19:59.320Z] Syncing module sources (4 files)... → Done (took 0.1 sec)
+
+[2019-12-11T20:19:59.330Z] Syncing module sources (4 files)... → Done (took 0.1 sec)
+
+[2019-12-11T20:19:59.339Z] Syncing module sources (3 files)... → Done (took 0.1 sec)
+
+[2019-12-11T20:19:59.347Z] Syncing module sources (2 files)... → Done (took 0.1 sec)
+
+[2019-12-11T20:19:59.397Z] Getting build status for v-a37b8d216b...
+
+[2019-12-11T20:19:59.404Z] Building version v-a37b8d216b...
+
+[2019-12-11T20:19:59.414Z] Getting build status for v-f6e1dd3260...
+
+[2019-12-11T20:19:59.425Z] Building version v-f6e1dd3260...
+
+[2019-12-11T20:19:59.434Z] Getting build status for v-24cd4a1988...
+
+[2019-12-11T20:19:59.442Z] Building version v-24cd4a1988...
+
+[2019-12-11T20:19:59.451Z] Building version v-a37b8d216b... → Done (took 0.1 sec)
+
+[2019-12-11T20:19:59.463Z] Building version v-f6e1dd3260... → Done (took 0 sec)
+
+[2019-12-11T20:19:59.475Z] Building version v-24cd4a1988... → Done (took 0 sec)
+
+[2019-12-11T20:19:59.499Z] Getting build status for v-2a522e7ef7...
+
+[2019-12-11T20:19:59.507Z] Building version v-2a522e7ef7...
+
+[2019-12-11T20:19:59.516Z] Building version v-2a522e7ef7... → Done (took 0 sec)
+
+[2019-12-11T20:19:59.559Z] Deploying version v-f6e1dd3260...
+
+[2019-12-11T20:19:59.566Z] Deploying version v-f6e1dd3260... → Version v-f6e1dd3260 already deployed
+
+[2019-12-11T20:19:59.574Z] Deploying version v-a37b8d216b...
+
+[2019-12-11T20:19:59.582Z] → Forward: localhost:63591 → php:9000
+
+[2019-12-11T20:19:59.591Z] Deploying version v-24cd4a1988...
+
+[2019-12-11T20:19:59.599Z] Deploying version v-24cd4a1988... → Version v-24cd4a1988 already deployed
+
+[2019-12-11T20:19:59.608Z] → Forward: postgres://localhost:63592 → postgres:5432
+
+[2019-12-11T20:19:59.642Z] Deploying version v-2a522e7ef7...
+
+[2019-12-11T20:19:59.651Z] Deploying version v-2a522e7ef7... → Version v-2a522e7ef7 already deployed
+
+[2019-12-11T20:19:59.661Z] → Forward: redis://localhost:63597 → redis:6379
+
+[2019-12-11T20:20:00.990Z] Waiting for resources to be ready...
+
+[2019-12-11T20:25:13.417Z] Deploying version v-a37b8d216b...
+
+[2019-12-11T20:25:13.445Z] Error: Timed out waiting for craft to deploy
+    at Object.<anonymous> (/snapshot/dist/build/src/plugins/kubernetes/status/status.js:0)
+    at Generator.next (<anonymous>)
+    at fulfilled (/snapshot/dist/build/src/plugins/kubernetes/status/status.js:0)
+Error Details:
+statuses:
+  - state: ready
+    resource:
+      kind: Deployment
+      apiVersion: apps/v1
+      metadata:
+        name: craft
+        namespace: craftcms
+        selfLink: /apis/apps/v1/namespaces/craftcms/deployments/craft
+        uid: fbe86cce-76f7-4d01-abf4-cb8eaf11d43d
+        resourceVersion: '970'
+        generation: 1
+        creationTimestamp: '2019-12-11T20:13:51Z'
+        labels:
+          app: craft
+          service: craft
+        annotations:
+          deployment.kubernetes.io/revision: '1'
+          garden.io/last-applied-configuration: >-
+            {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"service":"craft"},"labels":{"app":"craft","service":"craft"},"name":"craft","namespace":"craftcms"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"craft"}},"template":{"metadata":{"labels":{"app":"craft"}},"spec":{"containers":[{"env":[{"name":"LANG","value":"C.UTF-8"},{"name":"CRAFT_ENVIRONMENT","value":"dev"},{"name":"SECURITY_KEY","value":"sdrgargareg"},{"name":"DB_DRIVER","value":"pgsql"},{"name":"DB_DATABASE","value":"craft3"},{"name":"DB_SERVER","value":"postgres"},{"name":"DB_USER","value":"craft3"},{"name":"DB_PASSWORD","value":"password"},{"name":"PG_PASSWORD","value":"password"},{"name":"DB_SCHEMA","value":"public"},{"name":"PGPASSWORD","value":"password"},{"name":"DB_PORT","value":"5432"},{"name":"REDIS_HOST","value":"redis-master"},{"name":"REDIS_PORT_6379_TCP","value":"tcp://redis-master:6379"}],"image":"jlamb-nginx:latest","imagePullPolicy":"Never","name":"craft","ports":[{"containerPort":80,"name":"craft"}],"resources":{"limits":{"cpu":"500m","memory":"512Mi"},"requests":{"cpu":"250m","memory":"256Mi"}}}]}}}}
+          kubectl.kubernetes.io/last-applied-configuration: >
+            {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"garden.io/last-applied-configuration":"{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{\"service\":\"craft\"},\"labels\":{\"app\":\"craft\",\"service\":\"craft\"},\"name\":\"craft\",\"namespace\":\"craftcms\"},\"spec\":{\"replicas\":1,\"selector\":{\"matchLabels\":{\"app\":\"craft\"}},\"template\":{\"metadata\":{\"labels\":{\"app\":\"craft\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"LANG\",\"value\":\"C.UTF-8\"},{\"name\":\"CRAFT_ENVIRONMENT\",\"value\":\"dev\"},{\"name\":\"SECURITY_KEY\",\"value\":\"sdrgargareg\"},{\"name\":\"DB_DRIVER\",\"value\":\"pgsql\"},{\"name\":\"DB_DATABASE\",\"value\":\"craft3\"},{\"name\":\"DB_SERVER\",\"value\":\"postgres\"},{\"name\":\"DB_USER\",\"value\":\"craft3\"},{\"name\":\"DB_PASSWORD\",\"value\":\"password\"},{\"name\":\"PG_PASSWORD\",\"value\":\"password\"},{\"name\":\"DB_SCHEMA\",\"value\":\"public\"},{\"name\":\"PGPASSWORD\",\"value\":\"password\"},{\"name\":\"DB_PORT\",\"value\":\"5432\"},{\"name\":\"REDIS_HOST\",\"value\":\"redis-master\"},{\"name\":\"REDIS_PORT_6379_TCP\",\"value\":\"tcp://redis-master:6379\"}],\"image\":\"jlamb-nginx:latest\",\"imagePullPolicy\":\"Never\",\"name\":\"craft\",\"ports\":[{\"containerPort\":80,\"name\":\"craft\"}],\"resources\":{\"limits\":{\"cpu\":\"500m\",\"memory\":\"512Mi\"},\"requests\":{\"cpu\":\"250m\",\"memory\":\"256Mi\"}}}]}}}}","service":"craft"},"labels":{"app":"craft","service":"craft"},"name":"craft","namespace":"craftcms"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"craft"}},"template":{"metadata":{"labels":{"app":"craft"}},"spec":{"containers":[{"env":[{"name":"LANG","value":"C.UTF-8"},{"name":"CRAFT_ENVIRONMENT","value":"dev"},{"name":"SECURITY_KEY","value":"sdrgargareg"},{"name":"DB_DRIVER","value":"pgsql"},{"name":"DB_DATABASE","value":"craft3"},{"name":"DB_SERVER","value":"postgres"},{"name":"DB_USER","value":"craft3"},{"name":"DB_PASSWORD","value":"password"},{"name":"PG_PASSWORD","value":"password"},{"name":"DB_SCHEMA","value":"public"},{"name":"PGPASSWORD","value":"password"},{"name":"DB_PORT","value":"5432"},{"name":"REDIS_HOST","value":"redis-master"},{"name":"REDIS_PORT_6379_TCP","value":"tcp://redis-master:6379"}],"image":"jlamb-nginx:latest","imagePullPolicy":"Never","name":"craft","ports":[{"containerPort":80,"name":"craft"}],"resources":{"limits":{"cpu":"500m","memory":"512Mi"},"requests":{"cpu":"250m","memory":"256Mi"}}}]}}}}
+          service: craft
+      spec:
+        replicas: 1
+        selector:
+          matchLabels:
+            app: craft
+        template:
+          metadata:
+            creationTimestamp: null
+            labels:
+              app: craft
+          spec:
+            containers:
+              - name: craft
+                image: 'jlamb-nginx:latest'
+                ports:
+                  - name: craft
+                    containerPort: 80
+                    protocol: TCP
+                env:
+                  - name: LANG
+                    value: C.UTF-8
+                  - name: CRAFT_ENVIRONMENT
+                    value: dev
+                  - name: SECURITY_KEY
+                    value: sdrgargareg
+                  - name: DB_DRIVER
+                    value: pgsql
+                  - name: DB_DATABASE
+                    value: craft3
+                  - name: DB_SERVER
+                    value: postgres
+                  - name: DB_USER
+                    value: craft3
+                  - name: DB_PASSWORD
+                    value: password
+                  - name: PG_PASSWORD
+                    value: password
+                  - name: DB_SCHEMA
+                    value: public
+                  - name: PGPASSWORD
+                    value: password
+                  - name: DB_PORT
+                    value: '5432'
+                  - name: REDIS_HOST
+                    value: redis-master
+                  - name: REDIS_PORT_6379_TCP
+                    value: 'tcp://redis-master:6379'
+                resources:
+                  limits:
+                    cpu: 500m
+                    memory: 512Mi
+                  requests:
+                    cpu: 250m
+                    memory: 256Mi
+                terminationMessagePath: /dev/termination-log
+                terminationMessagePolicy: File
+                imagePullPolicy: Never
+            restartPolicy: Always
+            terminationGracePeriodSeconds: 30
+            dnsPolicy: ClusterFirst
+            securityContext: {}
+            schedulerName: default-scheduler
+        strategy:
+          type: RollingUpdate
+          rollingUpdate:
+            maxUnavailable: 25%
+            maxSurge: 25%
+        revisionHistoryLimit: 10
+        progressDeadlineSeconds: 600
+      status:
+        observedGeneration: 1
+        replicas: 1
+        updatedReplicas: 1
+        readyReplicas: 1
+        availableReplicas: 1
+        conditions:
+          - type: Available
+            status: 'True'
+            lastUpdateTime: '2019-12-11T20:15:02Z'
+            lastTransitionTime: '2019-12-11T20:15:02Z'
+            reason: MinimumReplicasAvailable
+            message: Deployment has minimum availability.
+          - type: Progressing
+            status: 'True'
+            lastUpdateTime: '2019-12-11T20:15:02Z'
+            lastTransitionTime: '2019-12-11T20:13:51Z'
+            reason: NewReplicaSetAvailable
+            message: ReplicaSet "craft-7698dd7946" has successfully progressed.
+  - state: deploying
+    resource:
+      kind: Service
+      apiVersion: v1
+      metadata:
+        name: craft
+        namespace: craftcms
+        selfLink: /api/v1/namespaces/craftcms/services/craft
+        uid: f1445e1e-f265-404b-98c2-2799f8bde756
+        resourceVersion: '777'
+        creationTimestamp: '2019-12-11T20:13:51Z'
+        labels:
+          app: craft
+          service: craft
+        annotations:
+          garden.io/last-applied-configuration: >-
+            {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"service":"craft"},"labels":{"app":"craft","service":"craft"},"name":"craft","namespace":"craftcms"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"craft"},"type":"LoadBalancer"}}
+          kubectl.kubernetes.io/last-applied-configuration: >
+            {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"garden.io/last-applied-configuration":"{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"service\":\"craft\"},\"labels\":{\"app\":\"craft\",\"service\":\"craft\"},\"name\":\"craft\",\"namespace\":\"craftcms\"},\"spec\":{\"ports\":[{\"port\":80,\"protocol\":\"TCP\",\"targetPort\":80}],\"selector\":{\"app\":\"craft\"},\"type\":\"LoadBalancer\"}}","service":"craft"},"labels":{"app":"craft","service":"craft"},"name":"craft","namespace":"craftcms"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"craft"},"type":"LoadBalancer"}}
+          service: craft
+      spec:
+        ports:
+          - protocol: TCP
+            port: 80
+            targetPort: 80
+            nodePort: 31403
+        selector:
+          app: craft
+        clusterIP: 10.101.116.83
+        type: LoadBalancer
+        sessionAffinity: None
+        externalTrafficPolicy: Cluster
+      status:
+        loadBalancer: {}
+
+
+[2019-12-11T20:25:13.457Z] 
+🕑  Waiting for code changes...
+
+[2019-12-11T20:25:13.468Z] 
+⏳  Processing...
+
+[2019-12-11T20:25:13.477Z] 
+🕑  Waiting for code changes...
+
+[2019-12-11T20:25:13.487Z] 
+⏳  Processing...
+
+[2019-12-11T20:25:13.497Z] 
+🕑  Waiting for code changes...

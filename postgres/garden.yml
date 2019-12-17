@@ -1,0 +1,5 @@
+kind: Module
+description: Postgres container
+name: postgres
+type: kubernetes
+files: [postgres.yaml, postgres-service.yaml, postgres-volumeclaim.yaml]

@@ -1,0 +1,152 @@
+
+[2019-12-11T20:25:13.438Z] Error: Timed out waiting for craft to deploy
+    at Object.<anonymous> (/snapshot/dist/build/src/plugins/kubernetes/status/status.js:0)
+    at Generator.next (<anonymous>)
+    at fulfilled (/snapshot/dist/build/src/plugins/kubernetes/status/status.js:0)
+Error Details:
+statuses:
+  - state: ready
+    resource:
+      kind: Deployment
+      apiVersion: apps/v1
+      metadata:
+        name: craft
+        namespace: craftcms
+        selfLink: /apis/apps/v1/namespaces/craftcms/deployments/craft
+        uid: fbe86cce-76f7-4d01-abf4-cb8eaf11d43d
+        resourceVersion: '970'
+        generation: 1
+        creationTimestamp: '2019-12-11T20:13:51Z'
+        labels:
+          app: craft
+          service: craft
+        annotations:
+          deployment.kubernetes.io/revision: '1'
+          garden.io/last-applied-configuration: >-
+            {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"service":"craft"},"labels":{"app":"craft","service":"craft"},"name":"craft","namespace":"craftcms"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"craft"}},"template":{"metadata":{"labels":{"app":"craft"}},"spec":{"containers":[{"env":[{"name":"LANG","value":"C.UTF-8"},{"name":"CRAFT_ENVIRONMENT","value":"dev"},{"name":"SECURITY_KEY","value":"sdrgargareg"},{"name":"DB_DRIVER","value":"pgsql"},{"name":"DB_DATABASE","value":"craft3"},{"name":"DB_SERVER","value":"postgres"},{"name":"DB_USER","value":"craft3"},{"name":"DB_PASSWORD","value":"password"},{"name":"PG_PASSWORD","value":"password"},{"name":"DB_SCHEMA","value":"public"},{"name":"PGPASSWORD","value":"password"},{"name":"DB_PORT","value":"5432"},{"name":"REDIS_HOST","value":"redis-master"},{"name":"REDIS_PORT_6379_TCP","value":"tcp://redis-master:6379"}],"image":"jlamb-nginx:latest","imagePullPolicy":"Never","name":"craft","ports":[{"containerPort":80,"name":"craft"}],"resources":{"limits":{"cpu":"500m","memory":"512Mi"},"requests":{"cpu":"250m","memory":"256Mi"}}}]}}}}
+          kubectl.kubernetes.io/last-applied-configuration: >
+            {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"garden.io/last-applied-configuration":"{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{\"service\":\"craft\"},\"labels\":{\"app\":\"craft\",\"service\":\"craft\"},\"name\":\"craft\",\"namespace\":\"craftcms\"},\"spec\":{\"replicas\":1,\"selector\":{\"matchLabels\":{\"app\":\"craft\"}},\"template\":{\"metadata\":{\"labels\":{\"app\":\"craft\"}},\"spec\":{\"containers\":[{\"env\":[{\"name\":\"LANG\",\"value\":\"C.UTF-8\"},{\"name\":\"CRAFT_ENVIRONMENT\",\"value\":\"dev\"},{\"name\":\"SECURITY_KEY\",\"value\":\"sdrgargareg\"},{\"name\":\"DB_DRIVER\",\"value\":\"pgsql\"},{\"name\":\"DB_DATABASE\",\"value\":\"craft3\"},{\"name\":\"DB_SERVER\",\"value\":\"postgres\"},{\"name\":\"DB_USER\",\"value\":\"craft3\"},{\"name\":\"DB_PASSWORD\",\"value\":\"password\"},{\"name\":\"PG_PASSWORD\",\"value\":\"password\"},{\"name\":\"DB_SCHEMA\",\"value\":\"public\"},{\"name\":\"PGPASSWORD\",\"value\":\"password\"},{\"name\":\"DB_PORT\",\"value\":\"5432\"},{\"name\":\"REDIS_HOST\",\"value\":\"redis-master\"},{\"name\":\"REDIS_PORT_6379_TCP\",\"value\":\"tcp://redis-master:6379\"}],\"image\":\"jlamb-nginx:latest\",\"imagePullPolicy\":\"Never\",\"name\":\"craft\",\"ports\":[{\"containerPort\":80,\"name\":\"craft\"}],\"resources\":{\"limits\":{\"cpu\":\"500m\",\"memory\":\"512Mi\"},\"requests\":{\"cpu\":\"250m\",\"memory\":\"256Mi\"}}}]}}}}","service":"craft"},"labels":{"app":"craft","service":"craft"},"name":"craft","namespace":"craftcms"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"craft"}},"template":{"metadata":{"labels":{"app":"craft"}},"spec":{"containers":[{"env":[{"name":"LANG","value":"C.UTF-8"},{"name":"CRAFT_ENVIRONMENT","value":"dev"},{"name":"SECURITY_KEY","value":"sdrgargareg"},{"name":"DB_DRIVER","value":"pgsql"},{"name":"DB_DATABASE","value":"craft3"},{"name":"DB_SERVER","value":"postgres"},{"name":"DB_USER","value":"craft3"},{"name":"DB_PASSWORD","value":"password"},{"name":"PG_PASSWORD","value":"password"},{"name":"DB_SCHEMA","value":"public"},{"name":"PGPASSWORD","value":"password"},{"name":"DB_PORT","value":"5432"},{"name":"REDIS_HOST","value":"redis-master"},{"name":"REDIS_PORT_6379_TCP","value":"tcp://redis-master:6379"}],"image":"jlamb-nginx:latest","imagePullPolicy":"Never","name":"craft","ports":[{"containerPort":80,"name":"craft"}],"resources":{"limits":{"cpu":"500m","memory":"512Mi"},"requests":{"cpu":"250m","memory":"256Mi"}}}]}}}}
+          service: craft
+      spec:
+        replicas: 1
+        selector:
+          matchLabels:
+            app: craft
+        template:
+          metadata:
+            creationTimestamp: null
+            labels:
+              app: craft
+          spec:
+            containers:
+              - name: craft
+                image: 'jlamb-nginx:latest'
+                ports:
+                  - name: craft
+                    containerPort: 80
+                    protocol: TCP
+                env:
+                  - name: LANG
+                    value: C.UTF-8
+                  - name: CRAFT_ENVIRONMENT
+                    value: dev
+                  - name: SECURITY_KEY
+                    value: sdrgargareg
+                  - name: DB_DRIVER
+                    value: pgsql
+                  - name: DB_DATABASE
+                    value: craft3
+                  - name: DB_SERVER
+                    value: postgres
+                  - name: DB_USER
+                    value: craft3
+                  - name: DB_PASSWORD
+                    value: password
+                  - name: PG_PASSWORD
+                    value: password
+                  - name: DB_SCHEMA
+                    value: public
+                  - name: PGPASSWORD
+                    value: password
+                  - name: DB_PORT
+                    value: '5432'
+                  - name: REDIS_HOST
+                    value: redis-master
+                  - name: REDIS_PORT_6379_TCP
+                    value: 'tcp://redis-master:6379'
+                resources:
+                  limits:
+                    cpu: 500m
+                    memory: 512Mi
+                  requests:
+                    cpu: 250m
+                    memory: 256Mi
+                terminationMessagePath: /dev/termination-log
+                terminationMessagePolicy: File
+                imagePullPolicy: Never
+            restartPolicy: Always
+            terminationGracePeriodSeconds: 30
+            dnsPolicy: ClusterFirst
+            securityContext: {}
+            schedulerName: default-scheduler
+        strategy:
+          type: RollingUpdate
+          rollingUpdate:
+            maxUnavailable: 25%
+            maxSurge: 25%
+        revisionHistoryLimit: 10
+        progressDeadlineSeconds: 600
+      status:
+        observedGeneration: 1
+        replicas: 1
+        updatedReplicas: 1
+        readyReplicas: 1
+        availableReplicas: 1
+        conditions:
+          - type: Available
+            status: 'True'
+            lastUpdateTime: '2019-12-11T20:15:02Z'
+            lastTransitionTime: '2019-12-11T20:15:02Z'
+            reason: MinimumReplicasAvailable
+            message: Deployment has minimum availability.
+          - type: Progressing
+            status: 'True'
+            lastUpdateTime: '2019-12-11T20:15:02Z'
+            lastTransitionTime: '2019-12-11T20:13:51Z'
+            reason: NewReplicaSetAvailable
+            message: ReplicaSet "craft-7698dd7946" has successfully progressed.
+  - state: deploying
+    resource:
+      kind: Service
+      apiVersion: v1
+      metadata:
+        name: craft
+        namespace: craftcms
+        selfLink: /api/v1/namespaces/craftcms/services/craft
+        uid: f1445e1e-f265-404b-98c2-2799f8bde756
+        resourceVersion: '777'
+        creationTimestamp: '2019-12-11T20:13:51Z'
+        labels:
+          app: craft
+          service: craft
+        annotations:
+          garden.io/last-applied-configuration: >-
+            {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"service":"craft"},"labels":{"app":"craft","service":"craft"},"name":"craft","namespace":"craftcms"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"craft"},"type":"LoadBalancer"}}
+          kubectl.kubernetes.io/last-applied-configuration: >
+            {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"garden.io/last-applied-configuration":"{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"service\":\"craft\"},\"labels\":{\"app\":\"craft\",\"service\":\"craft\"},\"name\":\"craft\",\"namespace\":\"craftcms\"},\"spec\":{\"ports\":[{\"port\":80,\"protocol\":\"TCP\",\"targetPort\":80}],\"selector\":{\"app\":\"craft\"},\"type\":\"LoadBalancer\"}}","service":"craft"},"labels":{"app":"craft","service":"craft"},"name":"craft","namespace":"craftcms"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"craft"},"type":"LoadBalancer"}}
+          service: craft
+      spec:
+        ports:
+          - protocol: TCP
+            port: 80
+            targetPort: 80
+            nodePort: 31403
+        selector:
+          app: craft
+        clusterIP: 10.101.116.83
+        type: LoadBalancer
+        sessionAffinity: None
+        externalTrafficPolicy: Cluster
+      status:
+        loadBalancer: {}
+

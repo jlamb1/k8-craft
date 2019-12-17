@@ -17,7 +17,7 @@ This has been tested on mac, and may require tweaks
     - `eval $(minikube docker-env)`
     - `docker build -f nginx/Dockerfile -t jlamb-nginx .`
     - `docker build -f php/Dockerfile -t jlamb-php .`
-    - `k8 apply -k k8/`
+    - `kubectl apply -k ./`
     - `minikube dashboard` - optional, to see deploy status. you will need to leave this terminal window open
 
 Once the deployment is live:

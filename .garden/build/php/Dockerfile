@@ -1,26 +1,15 @@
-FROM php:7.4-fpm
+FROM php:7.3-fpm-stretch
 
-
+RUN apt-get update && apt-get install -y wget gnupg g++ locales unzip dialog apt-utils git && apt-get clean
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-    wget \
-    gnupg \
-    g++ \
-    locales \
-    unzip \
-    dialog \
-    apt-utils \
-    git \
+    apt-get install -y \
     libpng-dev \
     libjpeg-dev \
-    libjpeg62-turbo-dev \
-    libxpm-dev \
     libfreetype6-dev \
     libzip-dev \
     libicu-dev \
     libpq-dev \
-    libwebp-dev \
     vim \
     nano \
     mc \
@@ -28,8 +17,7 @@ RUN apt-get update && \
     autoconf && \
     apt-get clean
 
-RUN docker-php-ext-configure gd  --with-freetype --with-webp --with-jpeg \
-    --with-xpm --with-freetype
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 
 # install necessary tools for running application
 RUN docker-php-ext-install \

@@ -1,0 +1,17 @@
+kind: Module
+description: Nginx container
+name: craft
+type: kubernetes
+files: [craft.yaml, craft-service.yaml]
+# services:
+#   - name: craft
+#     ports:
+#       - name: http
+#         containerPort: 80
+#     dependencies:
+#       - php
+#       - redis
+#       - postgres
+#     ingresses:
+#       - path: /
+#         port: http

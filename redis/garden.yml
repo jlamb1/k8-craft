@@ -1,0 +1,5 @@
+kind: Module
+description: Redis container
+name: redis
+type: kubernetes
+files: [redis.yaml, redis-service.yaml]

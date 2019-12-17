@@ -3,13 +3,13 @@ secretGenerator:
     literals:
       - password=password
 resources:
-  - craft.yaml
+  - ../nginx/craft.yaml
   # - craft-volumeclaim.yaml
-  - craft-service.yaml
-  - postgres.yaml
-  - postgres-volumeclaim.yaml
-  - postgres-service.yaml
-  - redis.yaml
-  - redis-service.yaml
-  - php.yaml
-  - php-service.yaml
+  - ../nginx/craft-service.yaml
+  - ../postgres/postgres.yaml
+  - ../postgres/postgres-volumeclaim.yaml
+  - ../postgres/postgres-service.yaml
+  - ../redis/redis.yaml
+  - ../redis/redis-service.yaml
+  - ../php/php.yaml
+  - ../php/php-service.yaml
