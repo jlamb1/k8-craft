@@ -12,7 +12,9 @@ This has been tested on mac, and may require tweaks
 ## Quick Start
 
 - clone repo
-    - `cd app && composer install`
+
+    ~~- `cd app && composer install`~~ < part of docker build now
+    - add `.env` file inside /app
 - from root of repo, run these scripts
     - `minikube start`
     - `eval $(minikube docker-env)`
