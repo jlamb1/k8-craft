@@ -1,7 +1,5 @@
 FROM php:7.4-fpm
 
-
-
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     wget \
@@ -28,8 +26,7 @@ RUN apt-get update && \
     autoconf && \
     apt-get clean
 
-RUN docker-php-ext-configure gd  --with-freetype --with-webp --with-jpeg \
-    --with-xpm --with-freetype
+RUN docker-php-ext-configure gd  --with-freetype --with-webp --with-jpeg --with-xpm
 
 # install necessary tools for running application
 RUN docker-php-ext-install \

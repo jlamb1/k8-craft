@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: postgres:11.5
+          image: postgres:12.1
           env:
             - name: POSTGRES_USER
               value: craft3

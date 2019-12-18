@@ -31,5 +31,4 @@ spec:
                 mkdir -p -m777 /var/www/html/web/cpresources /var/www/html/storage/runtime;
                 chmod -R 777 /var/www/html/config/ /var/www/html/storage/;
                 chmod -R 777 /var/www/html/web/cpresources/ /var/www/html/storage/runtime;
-
-#                 /var/www/html/craft setup/security-key;
+                 /var/www/html/craft setup/security-key;
