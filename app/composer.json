@@ -1,6 +1,9 @@
 {
+  "minimum-stability": "dev",
   "require": {
-    "craftcms/cms": "3.4.x-dev",
+    "craftcms/cms": "3.4.0-beta-1",
+    "mrclay/minify": "3.0.6",
+    "mrclay/props-dic": "^2.2",
     "vlucas/phpdotenv": "^3.4.0",
     "yiisoft/yii2-redis": "^2.0"
   },

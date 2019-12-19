@@ -61,7 +61,7 @@ COPY app/ /app
 
 # Install composer dependencies
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
-RUN composer install -d /app/
+# RUN composer install -d /app/
 
 # COPY app/ /var/www/html
 
