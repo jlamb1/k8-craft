@@ -18,7 +18,7 @@ Garden is optional as you can deploy regularly with kubernetes/kubectl directly.
 ## Quick Start
 
 - clone repo
-    - add `.env` file inside /app
+    - copy `.env.example` file inside /app to `.env`
 - from root of repo, run these scripts
     - if running minikube: `minikube start` `eval $(minikube docker-env)`
     - `docker build -f nginx/Dockerfile -t jlamb-nginx .`
