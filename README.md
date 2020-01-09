@@ -20,8 +20,7 @@ Garden is optional as you can deploy regularly with kubernetes/kubectl directly.
 - clone repo
     - add `.env` file inside /app
 - from root of repo, run these scripts
-    - `minikube start`
-    - `eval $(minikube docker-env)`
+    - if running minikube: `minikube start` `eval $(minikube docker-env)`
     - `docker build -f nginx/Dockerfile -t jlamb-nginx .`
     - `docker build -f php/Dockerfile -t jlamb-php .`
     - one of the two:
@@ -35,3 +34,7 @@ Once the deployment is live:
 - Finally, run `rm -rf storage/*` to clear a permissions problem. exit the container.
 
 run `minikube service craft --url` to get the link for your site, it should open to the welcome screen. If using Garden, the link is available directly in the terminal.
+
+### Troubleshooting
+
+If using Dnsmasq (Valet), you may need to run `sudo brew services stop dnsmasq` to allow minikube to resolve correctly
